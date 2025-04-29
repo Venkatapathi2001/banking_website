@@ -1,0 +1,105 @@
+.jumbotron {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;.jumbotron {
+        background: rgba(240, 253, 250, 0.9);
+        padding: 30px;
+        border-radius: 15px;
+        margin-top: 60px;
+        box-shadow: 0 4px 12px rgba(22, 162, 69, 0.08);
+        text-align: center;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 15px;
+        padding-left: 0;
+        justify-content: center;
+        background-color: #0d47a1; /* Deep Blue background */
+        padding: 15px 0;
+        border-radius: 8px;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        background-color: #1976d2; /* Medium Blue */
+        border-radius: 6px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        font-weight: 500;
+    }
+    
+    nav a:hover {
+        background-color: #42a5f5; /* Lighter Blue on hover */
+        transform: translateY(-2px);
+    }
+    
+    
+    footer {
+        text-align: center;
+        margin-top: 60px;
+        padding: 20px;
+        font-size: 14px;
+        color: #1814ed;
+        background-color: #e0f2f1;
+        border-top: 1px solid #b2dfdb;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 10px 25px;
+        border: none;
+        border-radius: 6px;
+        background-color: #009688;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+    
+    .btn:hover {
+        background-color: #00796b;
+    }
+    
+    /* Form Fields */
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"] {
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        width: 100%;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        background-color: #f1fefc;
+    }
+    
+    /* Center container on page */
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    margin-top: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
