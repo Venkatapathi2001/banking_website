@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Transaction History{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Transaction History</h1>
+
+    <div class="mb-3">
+        <strong>Account Number:</strong> {{ account_number }}
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction.type }}</td>
+                    <td>${{ transaction.amount }}</td>
+                    <td>{{ transaction.date|date:"d M Y H:i" }}</td>
+
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="3">No transactions found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

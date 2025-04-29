@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Check Account Balance</h2>
+    
+    <form method="POST" class="mb-4">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Account Number:</label>
+            <input type="text" class="form-control" name="account_number" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Check Balance</button>
+    </form>
+
+    {% if account %}
+        <div class="alert alert-success">
+            <p><strong>Account Number:</strong> {{ account.account_number }}</p>
+            <p><strong>Balance:</strong> ${{ account.balance }}</p>
+        </div>
+    {% endif %}
+
+    {% for message in messages %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+</div>
+{% endblock %}

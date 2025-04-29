@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+<h2>Welcome to Bank of Union</h2>
+
+<div class="account-details">
+    {% if account %}
+        <p>Account Number: {{ account.account_number }}</p>
+        <p>Current Balance: ${{ account.balance }}</p>
+    {% else %}
+        <p>No account created yet.</p>
+    {% endif %}
+</div>
+
+<footer>
+    <p>Banking made easy with Bank of Union.</p>
+</footer>
+{% endblock %}
